@@ -20,8 +20,8 @@ h2{
 
 .titleContainer {
     background-color:#4338CA;
+    width: 100vw;
     height: 15vh;
-    margin-bottom: 20px;
     color: #d74141;
     display: flex;
     justify-content: center;
@@ -43,12 +43,14 @@ h2{
 
 .commentContainer {
     background-color: grey;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em;
     z-index: 100;
     gap: 10px;
+    height: 17vh;
 }
 
 .leftButton {

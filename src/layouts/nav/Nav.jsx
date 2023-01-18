@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link as Anchor } from "react-router-dom";
 import "./navbar.css"
 
 const Navbar = () => {
@@ -7,9 +8,9 @@ const Navbar = () => {
         <div className="navbar">
             <div className= {`nav_items ${isOpen && "open"}`}>
                 <div className="links">
-                    <a href="../components/home/Home.jsx"> HOME</a>
-                    <a href="#"> COMICS</a>
-                    <a href="#"> NEW CHAPTER</a>
+                    <Anchor to={"/"}> HOME</Anchor>
+                    <Anchor to={"/comic"}> COMICS</Anchor>
+                    <Anchor to={"/new-chapters"}> NEW CHAPTER</Anchor>
                     <a href="#"> AUTHOR</a>
                 </div>
                 <div className={`cerrar ${isOpen && "close"}`} onClick={ () => setIsOpen(!isOpen)}>

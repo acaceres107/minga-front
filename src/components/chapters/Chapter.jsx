@@ -25,7 +25,6 @@ export default function Chapters() {
   const prev = () => {
     setPages(pages - 1);
   };
-
   useEffect(() => {
     dispatch(obtenerChapters({ id, pages }));
     dispatch(obtenerComics(id));
@@ -43,7 +42,7 @@ export default function Chapters() {
             alt=""
           />
           <p className="title">{chapter.title}</p>
-          <Anchor className="boton" to={"/pages"}>
+          <Anchor className="boton" to={`/pages/${chapter._id}`}>
             Read ...
           </Anchor>
         </div>

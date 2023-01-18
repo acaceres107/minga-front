@@ -12,7 +12,6 @@ const obtenerComics = createAsyncThunk (
         response : { comics : response.data},
         message : " comic obtained "
       }
-
             
         } catch (error) {
             console.log(error)
