@@ -9,6 +9,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
 .header-comics>h1{
     margin-top: 15%;
 }
@@ -43,10 +44,17 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    height: 25vh;
 }
 .img-category>img{
-    height: 8rem;
-    width: 8rem;
+    height: 23vh;
+    width: 11vw;
+    border-radius: 1vw;
+    object-fit: contain;
+}
+.img-category>img:hover{
+    height: 23.5vh;
+    width: 11.5vw;
 }
 .card-container{
     width: 60%;

@@ -58,7 +58,7 @@ traerPageActual()
       );
 
       console.log(nextchapter)
-      navigation(`/pages/${nextchapter?._id}`);
+      navigation(`/page/${nextchapter?._id}`);
       setCurrent(0);
     }
     if (current !== chapterStore.chapter.pages?.length - 1) {

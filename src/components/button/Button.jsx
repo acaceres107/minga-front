@@ -5,7 +5,7 @@ import categoriesActions from '../../store/categories/categories.action';
 const {filterCategoryComics}=categoriesActions
 function Button({id,name,num}) {
     let dispatch=useDispatch();
-    let [click,setClick]=useState(true);
+    let [click,setClick]=useState(false);
     
     const buttonId =(e)=>{
         e.preventDefault()
@@ -15,7 +15,9 @@ function Button({id,name,num}) {
     
     return (
         <>
-            <button onClick={buttonId} className={`input-${num}`} id={id}  >{name}</button>
+        {
+            click?( <button onClick={buttonId} className={`input-active-${num}`} id={id}  >{name}</button> ): (<button onClick={buttonId} className={`input-${num}`} id={id}  >{name}</button>)
+        }
         </>
     )
 }

@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className= {`nav_items ${isOpen && "open"}`}>
                 <div className="links">
                     <Anchor to={"/"}> HOME</Anchor>
-                    <Anchor to={"/comic"}> COMICS</Anchor>
+                    <Anchor to={"/comics"}> COMICS</Anchor>
                     <Anchor to={"/new-chapters"}> NEW CHAPTER</Anchor>
                     <a href="#"> AUTHOR</a>
                 </div>

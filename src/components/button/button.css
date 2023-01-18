@@ -1,24 +1,57 @@
 .input-0{
     background-color: #FFE0DF;
-    color: #EF8481
+    color: #d1706c;
+    font-size: 1.2vw
+}
+.input-0:hover{
+    background-color: #c76865;
 }
 .input-1{
     background-color: #FFDFC8;
-    color: #FC9C57;
+    color: #d18047;
+    font-size: 1.2vw ;
 }
 .input-2{
     background-color: #D1FBF0;
-    color: #00BA88;
+    color: #05926c;
+    font-size: 1.2vw;
 }
 .input-3{
-    background-color: #E0DBFF;
-    color: #8883F0;
+    background-color: #D1FBF0;
+    color: #05926c;
+    font-size: 1.2vw;
 }
 .input-4{
-    background-color: #b6adf7;
-    color: #6962f5;
+    background-color: #FFDFC8;
+    color: #d18047;
+    font-size: 1.2vw;
 }
 .input-5{
-    background-color: #675cb9;
-    color: #3e36da;
+    background-color: #FFE0DF;
+    color: #d1706c;
+    font-size: 1.2vw;
+}
+.input-active-0{
+    background-color: #bb0716;
+    font-size: 1.2vw;
+}
+.input-active-1{
+    background-color: #bb0716;
+    font-size: 1.2vw;
+}
+.input-active-2{
+    background-color: #bb0716;
+        font-size: 1.2vw;
+}
+.input-active-3{
+    background-color: #bb0716;
+        font-size: 1.2vw;
+}
+.input-active-4{
+    background-color: #bb0716;
+        font-size: 1.2vw;
+}
+.input-active-5{
+    background-color: #bb0716;
+        font-size: 1.2vw;
 }

@@ -19,9 +19,10 @@ h2{
 }
 
 .titleContainer {
+    margin-top: 9vh;
     background-color:#4338CA;
     width: 100vw;
-    height: 15vh;
+    height: 10vh;
     color: #d74141;
     display: flex;
     justify-content: center;
