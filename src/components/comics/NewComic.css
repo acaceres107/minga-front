@@ -1,0 +1,35 @@
+.section-form {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.input{
+    width: 68%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px black;
+    background-color:transparent;
+    color: black;
+} 
+option{
+    background-color: rgb(215, 207, 207);
+}
+
+.button-form {
+    padding: 1em 6em;
+    margin-top: 2em;
+    border-radius: 3rem;
+    border: none;
+    background-color: grey;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+
+

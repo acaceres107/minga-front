@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comics {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comics h1 {
+  margin-top: 2rem;
+  width: 80vw;
+  justify-self: center;
+  text-align: center;
+  font-size: 6vw;
+}
+.comics h3{
+  margin-top: 1.5vw;
+  align-self: flex-start;
+  color: rgba(97, 92, 92, 0.735);
+  margin-left: 3vw;
+}
+
+.comics img {
+  width: 90vw;
+  height: 40vw;
+  border-radius: 1rem;
+  box-shadow: 1px 1px;
+  object-fit: cover;
+  object-position: start;
+}
+
+.descripcion {
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  font-size: 3vw;
+  margin-bottom: 10vw;
+}
+.descripcion h2 {
+  margin-bottom: 5vw;
+}
+.botones {
+  margin-top: 5vw;
+  width: 70vw;
+  height: 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buton {
+  margin-top: 1rem;
+  font-size: 8vw;
+  padding: 0.6vw 2vw;
+  border-radius: 60%;
+  border: none;
+  margin-left: 3vw;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.buton:hover {
+  background-color: rgba(246, 240, 240, 0.786);
+  font-size: 8.1vw;
+}
+.emojis {
+  margin-top: 20px;
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-blue {
+  cursor: pointer;
+  border: none;
+  background-color: #4338ca;
+  border-radius: 20vw;
+  width: 35vw;
+  height: 5vw;
+  font-size: 3vw;
+  transition: 0.8s;
+}
+.btn-blue:hover {
+  background-color: #4339b3;
+}
+.btn-white {
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 20vw;
+  width: 35vw;
+  height: 5vw;
+  font-size: 3vw;
+  transition: 0.6s;
+}
+.btn-white:hover {
+  background-color: #4339b3;
+}
+
+@media (min-width: 768px) {
+  .comics img {
+    width: 40vw;
+    height: 50vw;
+  }
+
+  .comics h1 {
+    width: 50vw;
+    font-size: 3vw;
+  }
+  .botones {
+    margin-top: 2vw;
+    width: 40vw;
+  }
+  .btn-blue{
+    width: 25vw;
+    height: 3vw;
+    font-size: 2vw;
+  }
+  .btn-white{
+    width: 25vw;
+    height: 3vw;
+    font-size: 2vw;
+  }
+ 
+.descripcion {
+  margin-top: 8vw;
+  width: 50vw;
+  font-size: 2vw;
+  margin-bottom: 8vw;
+}
+.comics h3{
+  margin-left: 8vw;
+  margin-top: 1vw;
+
+}
+}
