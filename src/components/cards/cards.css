@@ -1,0 +1,20 @@
+.card{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+
+}
+.card>img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    clip-path: polygon(52% 0, 100% 0, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 24% 84%, 14% 63%, 12% 32%, 24% 13%);
+}
+.card>h3{
+    color: black;
+    margin-left: .5rem;
+}
