@@ -1,0 +1,12 @@
+.input-buttom{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+.input-buttom>button{
+    border-radius: 50px;
+    height: 2rem;
+    width: 4rem;
+    border: none;
+}
