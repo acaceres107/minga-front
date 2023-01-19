@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
+    color:#4338ca
 }
 .equis{
     width: 0;
@@ -29,14 +30,15 @@
 }
 
 
+
 @media (max-width: 768px) {
     .nav_items{
-        position: absolute;
+        position: absolute ;
+        z-index: 1;
         top: 60px;
         left: 0;
         background:  #4338CA;
         display: flex;
-
         justify-content: space-between;
         width: 100vw;
         height: -webkit-fill-available;        
