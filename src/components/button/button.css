@@ -11,25 +11,40 @@
     color: #d18047;
     font-size: 1.2vw ;
 }
+.input-1:hover{
+    background-color: #c76865;
+}
 .input-2{
     background-color: #D1FBF0;
     color: #05926c;
     font-size: 1.2vw;
+}
+.input-2:hover{
+    background-color: #c76865;
 }
 .input-3{
     background-color: #D1FBF0;
     color: #05926c;
     font-size: 1.2vw;
 }
+.input-3:hover{
+    background-color: #c76865;
+}
 .input-4{
     background-color: #FFDFC8;
     color: #d18047;
     font-size: 1.2vw;
 }
+.input-4:hover{
+    background-color: #c76865;
+}
 .input-5{
     background-color: #FFE0DF;
     color: #d1706c;
     font-size: 1.2vw;
+}
+.input-5:hover{
+    background-color: #c76865;
 }
 .input-active-0{
     background-color: #bb0716;
