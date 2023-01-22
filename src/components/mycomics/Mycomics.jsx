@@ -51,25 +51,25 @@ function Mycomics() {
 
   return (
     <>
-        <div className='header-comics'>
+        <div className='header-comics1'>
           <p>Comic</p>
           <h1>COMICS</h1>
           
         </div>
 
-        <main className='main-comics'>
-            <form className='input-buttom'>
+        <main className='main-comics1'>
+            <form className='input-buttom1'>
               <BtnCategories onClick={btn}></BtnCategories>
             </form>
-            <div className='card-container'>
+            <div className='card-container1'>
               {
-                comics?.length!==0?comics?.map((e,index)=>{return (<Cards title={e.title} id={e._id} photo={e.photo} key={index}></Cards>)}):<h1 className='message'>COMIC NOT FOUND</h1>
+                comics?.length!==0?comics?.map((e,index)=>{return (<Cards title={e.title} id={e._id} photo={e.photo} key={index}></Cards>)}):<h1 className='message1'>COMIC NOT FOUND</h1>
               }
               
             </div>
-            <div className='pages-btn'>
+            <div className='pages-btn1'>
               {
-                page===1?null:(<button  className='btn-pages' onClick={prev}>Prev</button>)
+                page===1?null:(<button  className='btn-pages1' onClick={prev}>Prev</button>)
               }
               {
                 comics.length<10?null:( <button onClick={next}>Next</button>)

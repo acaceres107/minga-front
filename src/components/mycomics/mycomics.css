@@ -1,4 +1,4 @@
-.header-comics{
+.header-comics1{
     background-image: url('../../../public/assets/imagen15.png');
     background-size:cover;
     background-repeat: no-repeat;
@@ -10,24 +10,11 @@
     flex-wrap: wrap;
 }
 
-.header-comics>h1{
+.header-comics1>h1{
     margin-top: 15%;
 }
-.search{
-    margin-top: .5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.search>input{
-    border-radius: 10px;
-    background-color: #EBEBEB;
-    height: 2rem;
-    width: 40%;
-    color: black;
-    position: absolute;
-}
-.main-comics{
+
+.main-comics1{
     width: 80%;
     margin: auto;
     background-color: #EBEBEB;
@@ -35,38 +22,38 @@
     position: relative;
     top: -14rem;
 }
-.main-comics>h2{
+.main-comics1>h2{
     margin-left: .1rem;
     color: black;
 }
-.img-category{
+.img-category1{
     margin-top: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
     height: 25vh;
 }
-.img-category>img{
+.img-category1>img{
     height: 23vh;
     width: 11vw;
     border-radius: 1vw;
     object-fit: contain;
 }
-.img-category>img:hover{
+.img-category1>img:hover{
     height: 23.5vh;
     width: 11.5vw;
 }
-.card-container{
+.card-container1{
     width: 60%;
     margin: auto;
 }
-.pages-btn{
+.pages-btn1{
     display: flex;
     justify-content: space-evenly;
     width: 30%;
     margin: auto;
 }
-.pages-btn>button{
+.pages-btn1>button{
     color: black;
     font-size: large;
     background: #4338CA;
@@ -74,7 +61,7 @@
     width: 4rem;
     border-radius: 50px;
 }
-.message{
+.message1{
     width: 100%;
     color: black;
     margin:auto;
