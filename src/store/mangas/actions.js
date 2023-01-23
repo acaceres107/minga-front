@@ -1,13 +1,14 @@
 
 import { createAsyncThunk  } from "@reduxjs/toolkit";
 import axios from "axios";
+import urlApi from "../../url";
 
 
 const obtenerComics = createAsyncThunk (
     "obtenerComics",
     async (comic) => {
         try {
-      const response = await axios.get(`http://localhost:8000/api/comics/${comic}`)
+      const response = await axios.get(`${urlApi}api/comics/${comic}`)
       return{
         response : { comics : response.data},
         message : " comic obtained "
