@@ -1,18 +1,27 @@
-import './App.css';
-import { RouterProvider } from 'react-router-dom';
-import router from './routes/index.js';
-import { Provider } from 'react-redux';
-import store from './store/store.js';
+import './App.css'
+import { useEffect } from 'react'
 
+import { RouterProvider } from 'react-router-dom'
+import router from './routes/index.js'
 
+import { useDispatch } from 'react-redux'
+import authActions from "./store/auth/actions"
+const { iniciar_sesion_con_token } = authActions
 
 function App() {
-  return (
+    //useSelector(store => console.log(store))
+    let dispatch = useDispatch()
+    useEffect(() => {
+        let token = localStorage.getItem('token')
+        //console.log(token)
+        if (token) {
+            dispatch(iniciar_sesion_con_token(token))
+        }
+    },[])
 
-    <Provider store={store}>
-            <RouterProvider router={router}/>
-    </Provider>
-  );
+    return (
+        <RouterProvider router={ router } />
+    )
 }
 
 export default App;
