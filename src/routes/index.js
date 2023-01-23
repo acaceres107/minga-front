@@ -7,7 +7,7 @@ import Pages from "../routes/pages/Pages";
 import Comic from "./mangas/comics/Comic";
 import Home from "../components/home/Home";
 import ComicsList from "../components/comics-list/Comics-list";
-
+import Comments from "../components/comments/Coments.jsx"
 export const router = createBrowserRouter([{
 
 
@@ -20,6 +20,9 @@ export const router = createBrowserRouter([{
     },{
         path:'/new-chapters',
         element: <Newchapter/>,
+    },{
+        path:"/new-comment",
+        element:<Comments/>
     },{
         path:"/comic/:id",
         element: <Comic/>, 
