@@ -30,8 +30,8 @@ const SignIn = () => {
 
     return (
         <div className='box'>
-            <form action="post" className='grow col flex'>
-                <fieldset>
+            <form action="post" id="form1" className='grow col flex'>
+                <fieldset className="fielInput">
                     <label htmlFor="mail">Mail</label>
                     <input type="text" placeholder='Email'id='mail' ref={mail}/>
                     <label htmlFor="pass">Password</label>

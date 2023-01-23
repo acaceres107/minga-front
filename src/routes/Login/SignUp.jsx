@@ -34,8 +34,8 @@ const SignUp = () => {
     return (
         <div className="box">
             <div className="grow bkg div2" style={{backgroundImage: "url('https://images.pexels.com/photos/7809123/pexels-photo-7809123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"}}></div>
-            <form action="post" className="grow col flex">
-                <fieldset>
+            <form action="post" id="form1" className="grow col flex">
+                <fieldset className="fielInput">
                     <label htmlFor="">Mail</label>
                     <input type="text" placeholder="Mail" ref={mail}/>
                     <label htmlFor="">Photo</label>
