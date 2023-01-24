@@ -1,86 +1,61 @@
-import "./mycomics.css"
-import React,{ useEffect,useState,useRef } from 'react';
-import { useDispatch,useSelector } from 'react-redux';
-import Cards from '../cards/Cards';
-import actionComic from '../../store/comics/comics.action';
-import BtnCategories from '../btnCategories/BtnCategories';
-const {getComics}=actionComic
-function Mycomics() {
+import "./mycomics.css";
+import React, { useEffect, useState, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Mycards from "../mycomics/Mycomics.cards";
+import actionComic from "../../store/comics/comics.action";
+import BtnCategories from "../btnCategories/BtnCategories";
+import myComicsAction from "../../store/mycomics/mycomics.actions";
 
-  let comicstore=useSelector((store)=>store.comics);
-  let dispatch=useDispatch();
-  let categoriesStore=useSelector((store)=>store.categories.filterCategory);
-  const btnCategory=categoriesStore
-  console.log(btnCategory)
-  let inputText=useRef('')
-  const [page,setPage]=useState(1)
-  const comics=comicstore.comic
-  let title=''
-  useEffect(()=>{
-    dispatch(getComics({
-      page:page,
-      title:title,
-      category:btnCategory.join(',')
-    }))
-  },[page,btnCategory])
-  
-  const next= ()=>{
-    setPage(page+1)
-  };
-  const prev= ()=>{
-    setPage(page-1)
-  };
-  const getInput=(e)=>{
-    e.preventDefault()
-    
-    dispatch(getComics({
-      page:page,
-      title:inputText.current.value,
-      category:btnCategory
-    }))
-   
-    
-  }
-  const btn=()=>{
-    dispatch(getComics({
-      page:page,
-      title:inputText.current.value,
-      category:btnCategory
-    }))
-  }
+
+function Mycomics() {
+  const { getMycomics } = myComicsAction;
+  let comicstore = useSelector((store) => store);
+  console.log(comicstore);
+
+  let dispatch = useDispatch();
+  let categoriesStore = useSelector((store) => store.categories.filterCategory);
+  const btnCategory = categoriesStore;
+  const comics = comicstore.comic;
+    let token = localStorage.getItem('token')
+    console.log(token);
+  useEffect(() => {
+
+      dispatch(getMycomics( {token} ));
+  }, []);
+
+
+
+  const  myComics  = useSelector((store) => store.Mycomics?.myComics);
+  console.log(myComics)
 
   return (
     <>
-        <div className='header-comics1'>
-          <p>Comic</p>
-          <h1>COMICS</h1>
-          
-        </div>
+      <div className="header-comics1">
+        <h1>COMICS author_/ company</h1>
+      </div>
 
-        <main className='main-comics1'>
-            <form className='input-buttom1'>
-              <BtnCategories onClick={btn}></BtnCategories>
-            </form>
-            <div className='card-container1'>
-              {
-                comics?.length!==0?comics?.map((e,index)=>{return (<Cards title={e.title} id={e._id} photo={e.photo} key={index}></Cards>)}):<h1 className='message1'>COMIC NOT FOUND</h1>
-              }
-              
-            </div>
-            <div className='pages-btn1'>
-              {
-                page===1?null:(<button  className='btn-pages1' onClick={prev}>Prev</button>)
-              }
-              {
-                comics.length<10?null:( <button onClick={next}>Next</button>)
-              }
-              
-             
-            </div>
-        </main>
-      
+      <main className="main-comics1">
+        <div className="card-container1">
+          {myComics?.length !== 0 ? (
+            myComics?.map((card, index) => {
+              return (
+                <div key={index}>
+                  <Mycards
+                    title={card.title}
+                    id={card._id}
+                    photo={card.photo}
+
+                  ></Mycards>
+                </div>
+              );
+            })
+          ) : (
+            <h1 className="message1">COMIC NOT FOUND</h1>
+          )}
+        </div>
+      </main>
     </>
-  )
+  );
 }
 
 export default Mycomics;

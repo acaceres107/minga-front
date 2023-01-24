@@ -1,20 +1,28 @@
 .navbar{
-    width: 98vw;
+    width: 100%;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    color:#4338ca
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.links {
+    display: flex;
 }
 .equis{
     width: 0;
     height: 0;
 }
-.nav_items a{
+.cerrar{
+    display: none;
+}
+.each-link {
     margin: 15px;
     color: white;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 .nav_toggle{
@@ -40,7 +48,7 @@
         background:  #4338CA;
         display: flex;
         justify-content: space-between;
-        width: 100vw;
+        align-items: center;
         height: -webkit-fill-available;        
         transform: translateX(-100%);
         transition: 0.3s ease all;

@@ -8,6 +8,8 @@ import Comic from "./mangas/comics/Comic";
 import Home from "../components/home/Home";
 import ComicsList from "../components/comics-list/Comics-list";
 import Mycomics from "../components/mycomics/Mycomics"
+import SignUp from "./Login/SignUp"
+import SignIn from "./Login/SignIn"
 
 export const router = createBrowserRouter([{
 
@@ -30,7 +32,13 @@ export const router = createBrowserRouter([{
     },{
         path:'/comics',
         element:<ComicsList/>
-    },]
+    },{
+        path:"/signin",
+        element:<SignIn/>
+    },{
+        path:"/signup",
+        element:<SignUp/>
+    }]
 },{
     path:'/page/:id',
     element: <Pages/>,

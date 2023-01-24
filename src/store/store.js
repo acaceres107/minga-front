@@ -5,6 +5,8 @@ import comicReducer from "./mangas/reducer"
 import chapterReducer from "./chapter/reducer"
 import categoriesReducer from "./categories/categories.reducer";
 import reducer from "./comics/comics.reducer";
+import authReducer from "./auth/reducers"
+import myComicReducer from "./mycomics/mycomics.reducer"
 const store = configureStore({
 
   reducer: {
@@ -13,7 +15,9 @@ const store = configureStore({
     comic : comicReducer,
     chapter :chapterReducer,
     comics:reducer,
-    categories:categoriesReducer
+    categories:categoriesReducer,
+    auth: authReducer,
+    Mycomics: myComicReducer
   }
 
 })
