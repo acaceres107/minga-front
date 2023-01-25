@@ -2,8 +2,6 @@ import "./mycomics.css";
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Mycards from "../mycomics/Mycomics.cards";
-import actionComic from "../../store/comics/comics.action";
-import BtnCategories from "../btnCategories/BtnCategories";
 import myComicsAction from "../../store/mycomics/mycomics.actions";
 
 
@@ -13,16 +11,17 @@ function Mycomics() {
   console.log(comicstore);
 
   let dispatch = useDispatch();
-  let categoriesStore = useSelector((store) => store.categories.filterCategory);
+  let categoriesStore = useSelector((store) => store?.categories?.filterCategory);
   const btnCategory = categoriesStore;
   const comics = comicstore.comic;
-    let token = localStorage.getItem('token')
+  const token = localStorage.getItem('token')
   useEffect(() => {
-
       dispatch(getMycomics( {token} ));
   }, []);
-  const  myComics  = useSelector((store) => store.Mycomics?.myComics);
+
+  const  myComics  = useSelector((store) => store?.Mycomics?.myComics);
   console.log(myComics)
+
 
   return (
     <>

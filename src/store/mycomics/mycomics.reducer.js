@@ -2,7 +2,7 @@ import { createReducer } from "@reduxjs/toolkit";
 import myComicsAction from "../mycomics/mycomics.actions.js";
  
 
-const { getMycomics } = myComicsAction
+const { getMycomics,updateMyCard } = myComicsAction
 const initialState = { myComics: [] ,  message: ""};
 
 const myComicReducer = createReducer(initialState, (builder) =>  {
@@ -18,6 +18,13 @@ const myComicReducer = createReducer(initialState, (builder) =>  {
     .addCase(getMycomics.rejected, (state, action) => {
         let newState =  {
             message: "ERROR"
+        }
+        return newState
+    })
+    .addCase(updateMyCard.fulfilled, (state, action) => {
+        let newState = {
+            myComics: action.payload?.response,
+        
         }
         return newState
     })

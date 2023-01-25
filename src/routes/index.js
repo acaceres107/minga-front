@@ -10,6 +10,7 @@ import ComicsList from "../components/comics-list/Comics-list";
 import Mycomics from "../components/mycomics/Mycomics"
 import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
+import Modal from "../components/mycomics/Modal";
 
 export const router = createBrowserRouter([{
 
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([{
         path:'/comics/me',
         element:<Mycomics/>
     },{
+        path:'/edit-comics/:id',
+        element:<Modal/>
+    },
+    {
         path:'/comics',
         element:<ComicsList/>
     },{

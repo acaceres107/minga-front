@@ -6,19 +6,21 @@ import { useState, useEffect } from 'react';
 import myComicsAction from '../../store/mycomics/mycomics.actions.js'
 import { useDispatch, useSelector } from 'react-redux';
 
-
-
+const {deleteMyCard} = myComicsAction; 
 
 function Mycards({title, photo, id}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-const openModal = () => {
+/* const openModal = () => {
   setIsModalOpen(true);
-};
-
+}; */
+/* let dispatch = useDispatch();
+useEffect(() => {
+  dispatch(deleteMyCard( id ));
+}, [id]); */
 const closeModal = () => {
   setIsModalOpen(false);
 };
-
+console.log(id)
   return (
   <>
     <div className='allContainer'>
@@ -29,10 +31,8 @@ const closeModal = () => {
       </div>
     </Link>
     <div className='btnContainer'>
-      <button className='btnE' onClick={openModal}>Edit</button>            
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
-      <button className='btnD' onClick={openModal}>Delete</button>
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
+    <Link  className='btnE' to={`/edit-comics/${id}`}>Edit</Link>                
+{/*       <Modal isOpen={isModalOpen} onClose={closeModal} /> */}
     </div>
 </div>
   </>

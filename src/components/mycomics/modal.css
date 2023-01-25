@@ -1,5 +1,5 @@
 .modal-overlay {
-    position: fixed;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -38,8 +38,7 @@
     padding: 20px ;
     border-radius: 10px;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-    position: relative;
-    z-index: 5;
+
 }
 .form10 {
     width: 100%;
