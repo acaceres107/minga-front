@@ -11,8 +11,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function Mycards({title, photo, id}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { getMycomics } = myComicsAction;
-  const token = localStorage.getItem("token")
 const openModal = () => {
   setIsModalOpen(true);
 };
@@ -20,12 +18,7 @@ const openModal = () => {
 const closeModal = () => {
   setIsModalOpen(false);
 };
-const dispatch = useDispatch();
-  useEffect(()=>{
-    dispatch(getMycomics({token}))
-  },[]);
-  const  myComics  = useSelector((store) => store.Mycomics.myComics);
-console.log(myComics)
+
   return (
   <>
     <div className='allContainer'>

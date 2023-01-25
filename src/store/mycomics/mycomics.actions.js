@@ -15,7 +15,8 @@ let getMycomics = createAsyncThunk(
             console.log(response);
             console.log(response.data)
             return{
-                    response: {comics:  response.data  } 
+                    response: {comics:  response.data,
+                    } 
              }
              
         }catch (error){
@@ -26,5 +27,9 @@ let getMycomics = createAsyncThunk(
 const myComicsAction = {
     getMycomics
 }
-
+/* let updateComics = createAsyncThunk(
+    "updateComics",
+    async()
+)
+ */
 export default myComicsAction;

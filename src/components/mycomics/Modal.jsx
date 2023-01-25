@@ -14,13 +14,23 @@ const Modal = ({ isOpen, onClose }) => {
                 <div className="form10 ">
                     <h1 className='titulo10 '>Edit Comic</h1>
                       <div className="grupo10 ">
-                        <input className="input10 " type="text" id="title" placeholder="Inserte el Titulo" /* ref={inputTitle} *//>
+                        <input className="input10 " type="text" id="title" placeholder="Inserte el Titulo nuevo" /* ref={inputTitle} *//>
                       </div>
                     < div className="grupo10 ">
-                        <input className="input10 " type="text"id="pages" placeholder="Inserte las Paginas" /* ref={inputPages} *//>
+                        <input className="input10 " type="text" id="pages" placeholder="Inserte la nueva Descripcion" /* ref={inputPages} *//>
+                      </div>
+                      < div className="grupo10 ">
+                        <select name="New Category">
+                          <option value="value1" selected>Shonen</option>
+                          <option value="value2">Manhwa</option>
+                          <option value="value3">Marvel</option>
+                          <option value="value4">DC</option>
+                          <option value="value5">Shojo</option>
+                          <option value="value6">Seinen</option>
+                        </select>
                       </div>
                       <div className="grupo10 ">
-                        <input className="input10 " type="number"id="order"placeholder="Inserte el orden del capitulo"/* ref={inputOrder} *//>
+                        <input className="input10 " type="image" id=""placeholder="Inserte la nueva imagen de Portada"/* ref={inputOrder} *//>
                       </div>
                     <input type="submit" className='btn10 ' value="Edit" /* onClick={save} *//>
                     <input type="submit" className='btn110 ' value="Delete" />

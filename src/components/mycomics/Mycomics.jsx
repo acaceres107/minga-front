@@ -17,14 +17,10 @@ function Mycomics() {
   const btnCategory = categoriesStore;
   const comics = comicstore.comic;
     let token = localStorage.getItem('token')
-    console.log(token);
   useEffect(() => {
 
       dispatch(getMycomics( {token} ));
   }, []);
-
-
-
   const  myComics  = useSelector((store) => store.Mycomics?.myComics);
   console.log(myComics)
 
