@@ -10,17 +10,7 @@ const {deleteMyCard} = myComicsAction;
 
 function Mycards({title, photo, id}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-/* const openModal = () => {
-  setIsModalOpen(true);
-}; */
-/* let dispatch = useDispatch();
-useEffect(() => {
-  dispatch(deleteMyCard( id ));
-}, [id]); */
-const closeModal = () => {
-  setIsModalOpen(false);
-};
-console.log(id)
+
   return (
   <>
     <div className='allContainer'>
@@ -30,11 +20,10 @@ console.log(id)
         <img src={photo} alt="img"/>
       </div>
     </Link>
-    <div className='btnContainer'>
-    <Link  className='btnE' to={`/edit-comics/${id}`}>Edit</Link>                
-{/*       <Modal isOpen={isModalOpen} onClose={closeModal} /> */}
+      <div className='btnContainer'>
+        <Link  className='btnE' to={`/edit-comics/${id}`}>Edit</Link>
+      </div>
     </div>
-</div>
   </>
   )
 }

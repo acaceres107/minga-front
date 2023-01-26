@@ -47,7 +47,7 @@ let updateMyCard = createAsyncThunk(
             let url = `http://localhost:8000/api/comics/${id}`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
             const response = await axios.put(url, comic, headers)
-            return{response: response.status, succes: true}
+            return{response: response.status, succes: true, message: "Updated with succes"}
 
         }catch(error){
             console.log(error);

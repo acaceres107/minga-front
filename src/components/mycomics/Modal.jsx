@@ -5,44 +5,47 @@ import Mycomics from './Mycomics';
 import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRef } from 'react';
-
+import alertActions from "../../store/alerts/actions"
 
 function Modal () {
   const {getMycomics ,updateMyCard, deleteMyCard} = myComicsAction
-/*   let Mycomics = useSelector(store=> store.Mycomics.myComics) */
+  const { mingaAlert } = alertActions
   const  myComics  = useSelector((store) => store?.Mycomics?.myComics);
-  console.log(Mycomics);
-    const token = localStorage.getItem('token')
+  console.log(myComics);
+  const token = localStorage.getItem('token')
   const navigate = useNavigate()
   const inputTitle = useRef("")
   const inputDes = useRef("")
   const inputPhoto = useRef("")
   const { id } = useParams();
   const dispatch = useDispatch();
+
   const deleteComic = async(e) =>{
   e.preventDefault()
   await dispatch(deleteMyCard(id))
+  .then(res => dispatch(mingaAlert("Deleted")))
+  .catch(err => 
+      dispatch(mingaAlert(err.response.data.response)))
+      navigate(-1)
 }
-const editComic = async(e) =>{
-  e.preventDefault()
-let comic = {}
-if(inputTitle.current.value){
-  comic.title = inputTitle.current.value
-}else if(inputDes.current.value){
-  comic.description = inputDes.current.value
-}else if(inputPhoto.current.value){
-  comic.photo = inputPhoto.current.value
-}
+  const editComic = async(e) =>{
+    e.preventDefault()
+  let comic = {}
+  if(inputTitle.current.value){
+    comic.title = inputTitle.current.value
+  }else if(inputDes.current.value){
+    comic.description = inputDes.current.value
+  }else if(inputPhoto.current.value){
+    comic.photo = inputPhoto.current.value
+  }
   await dispatch(updateMyCard({id, comic}))
-
- await  dispatch(getMycomics( {token} ))
+  .then(dispatch(mingaAlert("Updated")))
+  .catch(err => 
+      dispatch(mingaAlert(err.response.data.response)))
+      
+  await  dispatch(getMycomics( {token} ))
   navigate(-1)
 }
-
-
-
-
-
 
   return (
 

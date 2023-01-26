@@ -33,12 +33,13 @@
     justify-content: center;
     height: fit-content;
     top: 0;
-
+    right: 81%;
+    top: 68%;
 
 }
 .btnE{
- padding: 1.2vh;
- border-radius: 15px;
+ padding: 1.4vh;
+ border-radius: 12px;
  border: none;
  background-color: #E0DBFF;
  color: #8883F0;
@@ -55,4 +56,5 @@
     position: relative;
     width: 40vw;
     height: 25vh;
+
 }
