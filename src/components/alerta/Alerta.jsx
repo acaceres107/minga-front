@@ -6,8 +6,6 @@ import 'react-toastify/dist/ReactToastify.css'
 export default function Alerta () {
     let view = useSelector(store => store.alertReducer.view)
     let messages = useSelector(store => store.alertReducer.messages)
-    console.log(view)
-    console.log(messages);
     if (view){
         toast(typeof messages === "string"? messages : messages = messages?.map(message => message.message).join(),
       {
@@ -18,7 +16,7 @@ export default function Alerta () {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
         })
     }
   return (

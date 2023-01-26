@@ -8,7 +8,6 @@ let getComics= createAsyncThunk(
     async({page,title,category})=>{
         try{
             const res=await axios.get(`${urlApi}api/comics?page=${page}&title=${title}&category_id=${category}`)
-            console.log(category)
             return{
                 res : { comic : res.data.response},
                 message : "comic"

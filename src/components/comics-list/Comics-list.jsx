@@ -11,7 +11,6 @@ function ComicsList() {
   let dispatch=useDispatch();
   let categoriesStore=useSelector((store)=>store.categories.filterCategory);
   const btnCategory=categoriesStore
-  console.log(btnCategory)
   let inputText=useRef('')
   const [page,setPage]=useState(1)
   const comics=comicstore.comic
@@ -22,7 +21,7 @@ function ComicsList() {
       title:title,
       category:btnCategory.join(',')
     }))
-  },[page,btnCategory])
+  },[dispatch,title,page,btnCategory])
   
   const next= ()=>{
     setPage(page+1)

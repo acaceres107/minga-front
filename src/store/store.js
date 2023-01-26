@@ -6,6 +6,8 @@ import chapterReducer from "./chapter/reducer"
 import categoriesReducer from "./categories/categories.reducer";
 import reducer from "./comics/comics.reducer";
 import authReducer from "./auth/reducers"
+import commentsReducer from "./comments/comments.reducer"
+import deleteCommnets from "./comments/delete.comments.reducer"
 const store = configureStore({
 
   reducer: {
@@ -15,7 +17,9 @@ const store = configureStore({
     chapter :chapterReducer,
     comics:reducer,
     categories:categoriesReducer,
-    auth: authReducer
+    auth: authReducer,
+    comments:commentsReducer,
+    deleteComments:deleteCommnets
   }
 
 })

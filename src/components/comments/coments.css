@@ -1,51 +1,26 @@
-.form {
-
-    width: 20rem;
-    height: 15rem;
-    position: absolute;
+.form-comment{
+    
+    background-color: rgba(167, 167, 167, 0.63);
+    padding:1rem; 
+}
+.text{
+    background-color: rgba(167, 167, 167, 0.63);
+    height: 2.5rem;
+    width: 80%;
+    border: none;
+}
+.border-input{
+    border: solid 1px rgb(94, 42, 42);
+    border-radius: 10px;
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #4438cae7;
-    border-radius: 0.8rem;
-    box-sizing: border-box;
-    padding:1rem;
-}
-.form input {
-    border: rgb(52, 51, 51) solid 0.1px ;
-    width: 5rem;
-    height: 2rem;
-    border-radius: 0.8rem;
-    background-color: #4438cafb;
-}
-.form textarea {
-    border-radius: 0.5rem;
-    color: black !important;
-    text-align: center;
-
-
-}
-
-
-.container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    position: relative;
+    background-color: rgba(167, 167, 167, 0.63);
+    margin: auto;
+
 }
-.boton {
-    padding:3px;
-    border-radius: 0.8rem;
-    margin-top: 10px;
-    padding: .6rem 1rem;
-    background-color: #4338ca;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
-    transition: 5s ease-in-out;
-    -webkit-transition: 5s ease-in-out;
-    -moz-transition: 5s ease-in-out;
-    -ms-transition: 5s ease-in-out;
-    -o-transition: 5s ease-in-out;
+.submit-comment>img{
+    height: 1.5rem;
+    width: 1.5rem;
 }
+

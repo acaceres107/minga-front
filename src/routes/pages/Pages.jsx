@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Nav from '../../layouts/nav/Nav'
 import chapterActions from '../../store/chapter/actions'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate,Link } from 'react-router-dom'
 import "./pages.css"
 
 const { getChapterDetails, getChapters } = chapterActions
@@ -13,6 +13,7 @@ function Pages() {
   const chapterStore = useSelector(state => state?.pages )
   const dispatch = useDispatch()
   const { id } = useParams() 
+  console.log(id)
   const navigation = useNavigate()
   useEffect(() => {
       dispatch(getChapterDetails(id));
@@ -85,7 +86,6 @@ traerPageActual()
   return (
     <>
         <Nav /> 
-
       <div className="container">
           <div className="titleContainer">
             {getChapterTitle()}
@@ -96,7 +96,9 @@ traerPageActual()
           <div className="rightButton" onClick={next}></div>
         </div>
         <div className="commentContainer">
-        <img className="puntos" src="/assets/puntos.png" alt="" />
+          <Link to={`/comments/id=${id}`}>
+            <img className="puntos" src="/assets/puntos.png" alt="" />
+          </Link>
         <p className="pcomments">42</p>
         </div>
       </div>
