@@ -3,11 +3,14 @@ import axios from "axios";
 import urlApi from "../../url";
 
 
-let getComics= createAsyncThunk(
-    "getComics",
-    async({page,title,category})=>{
+let allComics = createAsyncThunk(
+    "allComics",
+    async()=>{
+        
         try{
-            const res=await axios.get(`${urlApi}api/comics?page=${page}&title=${title}&category_id=${category}`)
+              
+            const res=await axios.get(`${urlApi}api/comics`)
+
             return{
                 res : { comic : res.data.response},
                 message : "comic"
@@ -21,6 +24,10 @@ let getComics= createAsyncThunk(
     }
 )
 
-let actionComic={getComics}
+let actionAllComic={allComics}
 
-export default actionComic
+export default actionAllComic
+
+
+
+

@@ -5,7 +5,7 @@ const { newChapter, getChapterDetails, getChapters } = chapterActions;
 
 const initialState = { chapters: [], message: "", chapter: [] };
 
-const chapterReducer = createReducer(initialState, (builder) =>  {
+const chapterReducers = createReducer(initialState, (builder) =>  {
     builder
     .addCase(newChapter.fulfilled, (state, action) => {
         let newState = {
@@ -48,4 +48,4 @@ const chapterReducer = createReducer(initialState, (builder) =>  {
         )
 })
 
-export default chapterReducer
+export default chapterReducers 

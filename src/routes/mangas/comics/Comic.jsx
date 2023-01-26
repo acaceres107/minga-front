@@ -32,7 +32,7 @@ export default function Comic() {
     <div className="container">
       <div className="comics">
         <img src={comicStore.comic.response?.photo} alt="" />
-        <h3>By {comicStore.comic.response?.author_id.name}</h3>
+        <h3>By {comicStore.comic.response?.author_id?.name}</h3>
         <h1>{comicStore.comic.response?.title}</h1>
       </div>
       <div className="emojis">

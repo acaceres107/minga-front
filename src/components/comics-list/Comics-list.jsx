@@ -4,14 +4,17 @@ import { useDispatch,useSelector } from 'react-redux';
 import Cards from '../cards/Cards';
 import actionComic from '../../store/comics/comics.action';
 import BtnCategories from '../btnCategories/BtnCategories';
+
+
 const {getComics}=actionComic
+
+
 function ComicsList() {
 
   let comicstore=useSelector((store)=>store.comics);
   let dispatch=useDispatch();
   let categoriesStore=useSelector((store)=>store.categories.filterCategory);
   const btnCategory=categoriesStore
-  console.log(btnCategory)
   let inputText=useRef('')
   const [page,setPage]=useState(1)
   const comics=comicstore.comic
