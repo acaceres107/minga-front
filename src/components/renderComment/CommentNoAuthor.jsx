@@ -16,7 +16,6 @@ export default function CommentNoAuthor({text,photo,name,fn}) {
                 <img src="/assets/replybtn.png" alt="" />
             </button>
         </div>
-        
     </div>
   )
 }

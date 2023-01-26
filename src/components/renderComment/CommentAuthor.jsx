@@ -8,6 +8,7 @@ function CommentAuthor({text,photo,name,fn,id,chapter_id}) {
 
   let editButton=()=>{
     setEdit(!edit)
+
   };
 
   return (

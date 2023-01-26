@@ -13,7 +13,6 @@ function Pages() {
   const chapterStore = useSelector(state => state?.pages )
   const dispatch = useDispatch()
   const { id } = useParams() 
-  console.log(id)
   const navigation = useNavigate()
   useEffect(() => {
       dispatch(getChapterDetails(id));

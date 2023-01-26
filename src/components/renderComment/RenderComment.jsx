@@ -8,18 +8,21 @@ import './RenderComment.css';
 
 function RenderComment({text,photo,mail,idComment,reload,set,chapter_id}) {
   let deleteStore=useSelector((store)=> store.deleteComments )
-  console.log(deleteStore.response)
   let {deleteComment}=actionDelete;
   let {mingaAlert}=alertActions
   let nameUser=mail.split("@");
   let userStore=useSelector((store)=>store.auth.mail);
   let userMail=mail
   let dispatch=useDispatch()
+  
   let button=async (e)=>{
     e.preventDefault()
-    await dispatch(deleteComment(idComment))
-        .then(dispatch(mingaAlert(deleteStore.response)))
-        .catch(dispatch(mingaAlert(deleteStore.response)))
+    dispatch(deleteComment(idComment))
+        .then(dispatch(mingaAlert("Update Comment")))
+        //.catch(dispatch(mingaAlert("Error")))
+        .catch(()=>{
+          console.log('error actualizando')
+        })
     set(!reload)
   }
 
