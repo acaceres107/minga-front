@@ -11,6 +11,8 @@ import Mycomics from "../components/mycomics/Mycomics"
 import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
 import Modal from "../components/mycomics/Modal";
+import ChapterEdit from "../components/editions/ChapterEdit";
+
 
 export const router = createBrowserRouter([{
 
@@ -50,6 +52,9 @@ export const router = createBrowserRouter([{
 },{
     path:"/home",
     element: <Home/>, 
+},{
+    path:"/edit-chapters",
+    element: <ChapterEdit/>, 
 }])
 
 export default router
