@@ -8,7 +8,7 @@ import "./pages.css"
 const { getChapterDetails, getChapters } = chapterActions
 
 function Pages() {
-  
+  const comicId = useSelector((state) => state?.chapters?.chapter?.comic_id)
   const [current, setCurrent] = useState (JSON.parse(localStorage.getItem('page')))
   const chapterStore = useSelector(state => state?.pages )
   const dispatch = useDispatch()
@@ -16,8 +16,8 @@ function Pages() {
   const navigation = useNavigate()
   useEffect(() => {
       dispatch(getChapterDetails(id));
-      dispatch(getChapters("63bd819810acd63e286e5a76"))
-  }, [id])
+      dispatch(getChapters("comicId"))
+  }, [id, comicId])
   const getPagesImages = () => { 
     if (chapterStore.chapter?.pages?.length === 0) {
       return <p>Loading...</p>

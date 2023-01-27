@@ -7,9 +7,12 @@ import Pages from "../routes/pages/Pages";
 import Comic from "./mangas/comics/Comic";
 import Home from "../components/home/Home";
 import ComicsList from "../components/comics-list/Comics-list";
+import Mycomics from "../components/mycomics/Mycomics"
 import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
+import Modal from "../components/mycomics/Modal";
 import ChapterEdit from "../components/editions/ChapterEdit";
+
 
 export const router = createBrowserRouter([{
 
@@ -27,6 +30,13 @@ export const router = createBrowserRouter([{
         path:"/comic/:id",
         element: <Comic/>, 
     },{
+        path:'/comics/me',
+        element:<Mycomics/>
+    },{
+        path:'/edit-comics/:id',
+        element:<Modal/>
+    },
+    {
         path:'/comics',
         element:<ComicsList/>
     },{
@@ -37,7 +47,7 @@ export const router = createBrowserRouter([{
         element:<SignUp/>
     }]
 },{
-    path:'/pages/:id',
+    path:'/page/:id',
     element: <Pages/>,
 },{
     path:"/home",

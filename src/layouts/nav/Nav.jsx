@@ -20,6 +20,7 @@ const Navbar = () => {
                 <div className="links">
                     <Anchor className="each-link" to={"/"}> HOME</Anchor>
                     <Anchor className="each-link" to={"/comics"}> COMICS</Anchor>
+                    <Anchor className="each-link" to={"/comics/me"}>MY COMICS</Anchor>
                     <Anchor className="each-link" to={"/new-chapters"}> NEW CHAPTER</Anchor>
                     {is_online ? (
                         <span className="each-link" onClick={signout}>SIGN OUT</span>
