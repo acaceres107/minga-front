@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './cards.css'
-function Cards({title, photo, id}) {
+function Cards ({title, photo, id}) {
   return (
     <>
         <Link to={`/comic/${id}`}>
@@ -13,5 +13,4 @@ function Cards({title, photo, id}) {
     </>
   )
 }
-
 export default Cards
