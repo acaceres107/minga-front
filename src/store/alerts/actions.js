@@ -5,7 +5,6 @@ const mingaAlert = createAction(
 
     "mingaAlert",
     (data)=>{
-        console.log(data);
         return {payload: data}
 
     }

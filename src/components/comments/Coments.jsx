@@ -1,44 +1,40 @@
 /* eslint-disable react/jsx-no-duplicate-props */
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
 import "./coments.css";
 
 
-function Coments() {
-  const [salidaComents, setSalidaComents] = useState(false);
-  const coment = () => setSalidaComents(!salidaComents);
+function Coments({chapter_id,reload,set}) {
   const text = useRef("");
-
-
-  let guardaData = (e) => {
+  let userStore=useSelector((store)=>store.auth?.token)
+  
+  let guardaData =async (e) => {
     e.preventDefault();
     let data = {
-      chapter_id: "63acd1e28e7c0313cba77725",
-      user_id: "63acd1e28e7c0313cba77725",
+      chapter_id: chapter_id,
       text: text?.current?.value,
-      commentable_id: "63acd1e28e7c0313cba77725",
-    };   
-    console.log(data)
-    axios
-      .post("http://localhost:8000/api/comments", data)
+    };
+    let headers = {headers: {'Authorization':` Bearer  ${userStore} `}}   
+
+    await axios
+      .post("http://localhost:8000/api/comments", data,headers)
       .then((e) => console.log(e))
       .catch((error) => console.log(error));
-      console.log(data)
+      set(!reload)
   };
-
   return (
     <>
-      <div className="container">
-        <span className="boton" onClick={coment}>Comment</span>
-        {salidaComents ? (
-          <form className="form" onSubmit={guardaData}>
-            <label>
-              Dejanos un comentario :
-            </label>
-            <textarea rows="5" cols="33" ref={text}></textarea>
-            <input onClick={()=>{coment()}}  type="submit"></input>
+      <div className="comment-container">
+          <form className="form-comment" onSubmit={guardaData}>
+            <div className="border-input">
+              <input className="text" type='text' rows="5" cols="33" placeholder="Say something here..." ref={text}></input>
+              <button type="submit" className="submit-comment" onClick={(e)=>{guardaData(e)}}>
+                <img  src="/assets/send.png" alt="sendimg" ></img>
+              </button>
+            </div>
+            
           </form>
-        ) : null}
       </div>
     </>
   );

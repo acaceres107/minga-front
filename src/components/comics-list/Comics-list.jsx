@@ -25,7 +25,7 @@ function ComicsList() {
       title:title,
       category:btnCategory.join(',')
     }))
-  },[page,btnCategory])
+  },[dispatch,title,page,btnCategory])
   
   const next= ()=>{
     setPage(page+1)

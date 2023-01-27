@@ -1,0 +1,61 @@
+.commentcard-conteiner{
+    margin-top: 1rem;
+    width: 70%;
+    height: 14rem;
+    background-color: white;
+}
+
+.user-info{
+    display: flex;
+    margin-left: 1.5rem;
+}
+.user-info>h2{
+    color:black;
+    margin: auto;
+    margin-left: 1rem;
+}
+.user-info>img{
+    border-radius: 50%;
+    height: 3rem;
+    width:4rem;
+    object-fit:fill;
+}
+.edit-delete{
+    display: flex;
+    margin-left: .5rem;
+    padding: .8rem;
+}
+.delete-btn{
+    border: none;
+    margin-left: 1rem;
+    background-color: white;
+}
+.edit-btn{
+    border: none;
+}
+.delete-btn>img{
+    height: 2.5rem;
+    width: 2rem;
+    object-fit: contain;
+}
+.edit-btn>img{
+    height: 2.5rem;
+    width: 5rem;
+    object-fit:fill;
+}
+.comment-text{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.form-edit{
+    
+    width: 100%;
+    margin: auto;
+}
+.button-form{
+    margin-left: 1rem; 
+}
+.input-edit{
+    background-color: rgba(128, 128, 128, 0.39);
+    border-radius: 5px;
+}

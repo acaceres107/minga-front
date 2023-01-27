@@ -7,6 +7,7 @@ import Pages from "../routes/pages/Pages";
 import Comic from "./mangas/comics/Comic";
 import Home from "../components/home/Home";
 import ComicsList from "../components/comics-list/Comics-list";
+import ListComment from "../components/ListComment/ListComment";
 import Mycomics from "../components/mycomics/Mycomics"
 import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
@@ -47,7 +48,10 @@ export const router = createBrowserRouter([{
         element:<SignUp/>
     }]
 },{
-    path:'/page/:id',
+    path:"/comments/:id",
+    element:<ListComment/>
+},{
+    path:'/pages/:id',
     element: <Pages/>,
 },{
     path:"/home",
