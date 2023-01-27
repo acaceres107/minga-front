@@ -12,7 +12,7 @@ const { obtenerComics } = comicsActions;
 const { obtenerChapters } = chapterAction;
 
 export default function Chapters() {
-  const chapterStore = useSelector((store) => store.chapter);
+  const chapterStore = useSelector((store) => store.chapters);
   const dispatch = useDispatch();
   const { id } = useParams();
   const comicStore = useSelector((store) => store.comic);
@@ -31,6 +31,8 @@ export default function Chapters() {
   }, [pages, id]);
 
   let cantidadCapitulos = chapterStore?.chapter?.response;
+  
+
 
   return (
     <div>

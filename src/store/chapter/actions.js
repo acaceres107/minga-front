@@ -2,6 +2,19 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import urlApi from "../../url";
 
+
+const handleToken = () => {
+  const BEARER_TOKEN = localStorage.getItem("token")
+
+  let config = {
+      headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${BEARER_TOKEN}`,
+      },
+  }
+  return config
+}
+
 const newChapter = createAsyncThunk("newChapter", async (chapter) => {
   try {
     const response = await axios.post(`${urlApi}api/chapters`, chapter);
@@ -66,17 +79,46 @@ const obtenerChapters = createAsyncThunk(
       console.log(error);
       return {
         response: { chapter: error.response.data },
-        message: "error chapter obtain",
+        message: "error  2 chapter obtain",
       };
     }
   }
 );
+
+const updateChapter = createAsyncThunk("editChapters", async ({id, chapter}) => {
+  try {
+    let token = localStorage.getItem("token")
+    let headers = {headers: {'Authorization': `Bearer ${token}`}}
+    const res = await axios.put(`${urlApi}api/chapters/${id}` ,chapter, headers)
+    return (res)
+  } catch (error) {
+    
+  }
+     
+})
+
+const deleteChapter = createAsyncThunk("deleteChapters", async (id) => {
+
+try {
+  let token = localStorage.getItem("token")
+  let headers = {headers: {'Authorization': `Bearer ${token}`}}
+  const res = await axios.delete(`${urlApi}api/chapters/${id}` , headers)
+  return {
+    response: { chapters: res.data },
+    message: "Chapters delete",
+  };
+} catch (error) {
+  
+}
+})
 
 const chapterActions = {
   newChapter,
   getChapterDetails,
   getChapters,
   obtenerChapters,
+  deleteChapter,
+  updateChapter
 };
 
 export default chapterActions;
