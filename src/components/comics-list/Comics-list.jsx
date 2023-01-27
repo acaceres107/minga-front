@@ -4,7 +4,11 @@ import { useDispatch,useSelector } from 'react-redux';
 import Cards from '../cards/Cards';
 import actionComic from '../../store/comics/comics.action';
 import BtnCategories from '../btnCategories/BtnCategories';
+
+
 const {getComics}=actionComic
+
+
 function ComicsList() {
 
   let comicstore=useSelector((store)=>store.comics);

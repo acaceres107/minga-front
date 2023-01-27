@@ -9,6 +9,7 @@ export default function Alerta () {
     if (view){
         toast(typeof messages === "string"? messages : messages = messages?.map(message => message.message).join(),
       {
+        className: "tostada",
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -16,12 +17,12 @@ export default function Alerta () {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
         })
     }
   return (
     <div>
-        <ToastContainer/>
+        <ToastContainer />
     </div>
   )
 }

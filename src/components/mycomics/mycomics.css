@@ -1,0 +1,94 @@
+.header-comics1{
+    background-image: url('../../../public/assets/imagen15.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-comics1>h1{
+    margin-top: 15%;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+}
+
+.main-comics1{
+    width: 80%;
+    margin: auto;
+    background-color: #EBEBEB;
+    border-radius: 80px 80px 0px 0px;
+    position: relative;
+    top: -14rem;
+}
+.main-comics1>h2{
+    margin-left: .1rem;
+    color: black;
+}
+.img-category1{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 25vh;
+}
+.img-category1>img{
+    height: 23vh;
+    width: 11vw;
+    border-radius: 1vw;
+    object-fit: contain;
+}
+.img-category1>img:hover{
+    height: 23.5vh;
+    width: 11.5vw;
+}
+.card-container1{
+    width: 60%;
+    margin: auto;
+    align-items: center;
+}
+.pages-btn1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: auto;
+}
+.pages-btn1>button{
+    color: black;
+    font-size: large;
+    background: #4338CA;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 50px;
+}
+.message1{
+    width: 100%;
+    color: black;
+    margin:auto;
+}
