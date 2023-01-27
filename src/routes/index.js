@@ -9,6 +9,7 @@ import Home from "../components/home/Home";
 import ComicsList from "../components/comics-list/Comics-list";
 import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
+import ChapterEdit from "../components/editions/ChapterEdit";
 
 export const router = createBrowserRouter([{
 
@@ -41,6 +42,9 @@ export const router = createBrowserRouter([{
 },{
     path:"/home",
     element: <Home/>, 
+},{
+    path:"/edit-chapters",
+    element: <ChapterEdit/>, 
 }])
 
 export default router
