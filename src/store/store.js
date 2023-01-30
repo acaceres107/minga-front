@@ -12,6 +12,7 @@ import deleteCommnets from "./comments/delete.comments.reducer"
 import myComicReducer from "./mycomics/mycomics.reducer"
 import reducerAll from "./allcomic/reducer"
 import reducerchap from "./allcomic/reducChapter"
+import donationReducer from "./mercadPago/reducers"
 const store = configureStore({
 
   reducer: {
@@ -24,10 +25,11 @@ const store = configureStore({
     categories:categoriesReducer,
     auth: authReducer,
     comments:commentsReducer,
-    deleteComments:deleteCommnets
-    Mycomics: myComicReducer
+    deleteComments:deleteCommnets,
+    Mycomics: myComicReducer,
     all : reducerAll,
-    chap : reducerchap
+    chap : reducerchap,
+    mercadoPago: donationReducer,
   }
   
 })
