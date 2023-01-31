@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layouts from "../layouts/Layout";
 import Header from "../components/home/Home";
 import Newchapter from "../components/chapters/Newchapters";
+import NewAuthor from "../components/authors/NewAuthor";
 import Pages from "../routes/pages/Pages";
 import Comic from "./mangas/comics/Comic";
 import Home from "../components/home/Home";
@@ -13,7 +14,7 @@ import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
 import Modal from "../components/mycomics/Modal";
 import ChapterEdit from "../components/editions/ChapterEdit";
-
+import NewRole from "../components/role/NewRole";
 
 export const router = createBrowserRouter([{
 
@@ -27,6 +28,9 @@ export const router = createBrowserRouter([{
     },{
         path:'/new-chapters',
         element: <Newchapter/>,
+    },{
+        path:'/new-author',
+        element: <NewAuthor/>,
     },{
         path:"/comic/:id",
         element: <Comic/>, 
@@ -59,6 +63,9 @@ export const router = createBrowserRouter([{
 },{
     path:"/edit-chapters",
     element: <ChapterEdit/>, 
+},{
+    path:"/new-role",
+    element: <NewRole/>, 
 }])
 
 export default router

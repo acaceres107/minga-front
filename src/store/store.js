@@ -24,8 +24,8 @@ const store = configureStore({
     categories:categoriesReducer,
     auth: authReducer,
     comments:commentsReducer,
-    deleteComments:deleteCommnets
-    Mycomics: myComicReducer
+    deleteComments:deleteCommnets,
+    Mycomics: myComicReducer,
     all : reducerAll,
     chap : reducerchap
   }

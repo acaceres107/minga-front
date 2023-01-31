@@ -13,15 +13,33 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const handleMenu = () => setIsOpen(!isOpen)
     const signout = async(event)  => await dispatch(cerrar_sesion(token))
+    let userStore=useSelector((store)=>store.auth);
+    console.log(userStore.is_author) 
 
+    
     return(
         <div className="navbar">
             <div className= {`nav_items ${isOpen && "open"}`}>
                 <div className="links">
-                    <Anchor className="each-link" to={"/"}> HOME</Anchor>
-                    <Anchor className="each-link" to={"/comics"}> COMICS</Anchor>
-                    <Anchor className="each-link" to={"/comics/me"}>MY COMICS</Anchor>
-                    <Anchor className="each-link" to={"/new-chapters"}> NEW CHAPTER</Anchor>
+                    {
+                        userStore.is_author||userStore.is_company?(
+                            <>
+                                <Anchor className="each-link" to={"/"}> HOME</Anchor>
+                                <Anchor className="each-link" to={"/"}> NEW COMIC</Anchor>
+                                <Anchor className="each-link" to={"/edit-chapters"}>EDIT CHAPTER</Anchor>
+                                <Anchor className="each-link" to={"/comics/me"}>MY COMICS</Anchor>
+                                <Anchor className="each-link" to={"/"}> PORFILE</Anchor>
+                            </>
+                        ):(
+                            <>
+                                <Anchor className="each-link" to={"/"}> HOME</Anchor>
+                                <Anchor className="each-link" to={"/comics"}> COMICS</Anchor>
+                                <Anchor className="each-link" to={"/comics/me"}>MY COMICS</Anchor>
+                                <Anchor className="each-link" to={"/new-chapters"}> NEW CHAPTER</Anchor>
+                            </>
+                        )    
+                    }
+                    
                     {is_online ? (
                         <span className="each-link" onClick={signout}>SIGN OUT</span>
                     ) : (

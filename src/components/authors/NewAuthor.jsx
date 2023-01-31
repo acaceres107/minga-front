@@ -1,17 +1,18 @@
 import React, {useRef} from 'react'
 import axios from 'axios'
-import './style/AgregarAutor.css';
-import person from '../assets/img/Rectanglea.jpg'
+import './NewAuthor.css'
+import { useSelector } from 'react-redux'
 import swal from 'sweetalert'
 
 
-function AgregarAutor() {
+function NewAuthor() {
     const inputName = useRef("");
     const inputLastName = useRef("");
     const inputCityCountry = useRef("");
     const inputDate = useRef("");
     const inputUrl = useRef("");
-    
+    let userStore=useSelector((store)=>store.auth);
+    console.log(userStore.is_author) 
 
     let guardarData = (e) => {
         e.preventDefault()
@@ -22,10 +23,13 @@ function AgregarAutor() {
             country: inputCityCountry.current.value,
             date: inputDate.current.value,
             photo: inputUrl.current.value,
-            user_id: "63acd1e28e7c0313cba77725"
+            user_id: userStore.id,
         }
          axios.post("http://localhost:8000/api/authors/",data)
-         .then(e=>console.log(e))
+         .then(e=>{console.log(e) 
+            //userStore.is_author=true
+            console.log(userStore)
+        })
          .catch(error=>console.log(error))
          
     }
@@ -43,7 +47,7 @@ function AgregarAutor() {
             <form className='formP' action="" onSubmit={guardarData}>
                 <div className="form1">
                     <h1 className='titulo1'>New Author</h1>
-                    <img className='img1' src={person}/>
+                    <img className='img1' src='assets/Rectanglea.jpg' alt='img'/>
                     <div className="grupo">
                         <input className='input1' type="text" name="" id="" placeholder="Name" ref={inputName}/>
                     </div>
@@ -68,4 +72,4 @@ function AgregarAutor() {
     
 }
 
-export default AgregarAutor
+export default NewAuthor
