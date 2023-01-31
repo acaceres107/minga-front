@@ -17,6 +17,9 @@ export default function Carrusel() {
         }
     }
 
+
+    
+
     useEffect(() => {
         traerDatos()
     }, []

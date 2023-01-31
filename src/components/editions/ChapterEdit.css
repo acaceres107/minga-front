@@ -93,12 +93,7 @@ option {
 } 
 
 @media (min-width: 768px) {
-    .container{
-    flex-direction: row-reverse;
-    height: 70vh;
-    width: 90vw;
-    transition: all 0.2s;
-    }
+   
     .divContainerForm{
         width: 50%;
         height: 100%;

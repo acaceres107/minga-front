@@ -13,6 +13,7 @@ import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
 import Modal from "../components/mycomics/Modal";
 import ChapterEdit from "../components/editions/ChapterEdit";
+import Welcome from "../components/welcome/Welcome";
 
 
 export const router = createBrowserRouter([{
@@ -59,6 +60,9 @@ export const router = createBrowserRouter([{
 },{
     path:"/edit-chapters",
     element: <ChapterEdit/>, 
+},{
+    path:"/verify/:verify_Code",
+    element: <Welcome/> , 
 }])
 
 export default router
