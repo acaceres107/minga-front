@@ -16,7 +16,7 @@
 #form1{
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 0%;
     background-color: white;
@@ -30,6 +30,10 @@
 .div2{
     width: 50%;
     flex-grow: 1;
+}
+.letrero{
+    color: #1c1c1c;
+
 }
 label{
     color: #1c1c1c;
@@ -65,4 +69,17 @@ fieldset{
     .div2{
         display: none;
     }
+    #form1 {
+        
+    background-color: #ffffff6a;
+
+    }
+    
+label{
+    color: #0f0f0f;
+    font-weight: 800;
+    font-size: 4vw;
+}
+
+
 }

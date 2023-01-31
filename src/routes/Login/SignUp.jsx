@@ -33,7 +33,8 @@ const SignUp = () => {
 
     return (
         <div className="box">
-            <div className="grow bkg div2" style={{backgroundImage: "url('https://images.pexels.com/photos/7809123/pexels-photo-7809123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"}}></div>
+
+            <div className="grow bkg div2" style={{opacity: "0,2 " , backgroundImage: "url('https://images.pexels.com/photos/7809123/pexels-photo-7809123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"}}></div>
             <form action="post" id="form1" className="grow col flex">
                 <fieldset className="fielInput">
                     <label htmlFor="">Mail</label>
@@ -44,7 +45,7 @@ const SignUp = () => {
                     <input type="password" placeholder="Password" ref={password}/>
                     <input onClick={(e)=>captureData(e)} type="submit" value="enviar" />
                 </fieldset>
-                <div>
+                <div className="letrero">
                     <p>Do you already have an account? then</p>
                     <Anchor to="/signin">Login!</Anchor>
                 </div>

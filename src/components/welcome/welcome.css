@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: rgb(255, 255, 255);
 }
 
 .section-welcome {
@@ -26,13 +25,18 @@
   background-color: #4338ca;
   border-radius: 10px;
   transition: 2ms;
+  color: rgb(255, 255, 255);
+
 }
 .button-start:hover {
 background-color:   #4137ab;
 }
 .section-welcome h1 {
   margin-bottom: 2rem;
+  color: rgb(255, 255, 255);
+
 }
 .section-welcome h4 {
   font-size: 1.9vw;
+  color: rgb(255, 255, 255);
 }
