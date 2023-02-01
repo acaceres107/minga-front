@@ -17,7 +17,7 @@ import Modal from "../components/mycomics/Modal";
 import ChapterEdit from "../components/editions/ChapterEdit";
 import Welcome from "../components/welcome/Welcome";
 import SuccessPayment from "../components/mercadoPago/SuccesPayment";
-import NewRole from "../components/role/NewRole";
+import NewRole from "../components/role/NewRole"
 
 
 export const router = createBrowserRouter(
