@@ -14,6 +14,7 @@ import SignIn from "./Login/SignIn"
 import Modal from "../components/mycomics/Modal";
 import ChapterEdit from "../components/editions/ChapterEdit";
 import Welcome from "../components/welcome/Welcome";
+import SuccessPayment from "../components/mercadoPago/SuccesPayment";
 
 
 
@@ -64,7 +65,11 @@ export const router = createBrowserRouter(
     element: <ChapterEdit/>, 
 },{
     path:"/verify/:verify_Code",
-    element: <Welcome/> , 
+    element: <Welcome/>, 
+},{ 
+    path:"/success-payment",
+    element:<SuccessPayment/>
+ 
 }])
 
 export default router

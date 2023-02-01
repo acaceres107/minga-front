@@ -1,0 +1,37 @@
+
+
+.success-main{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.success{
+    border: red 2 px solid;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.naruto{
+    width: 60vw;
+    height: 50vh;
+    border-radius: 1.5vh;
+}
+.naruto-text{
+    color: black;
+}
+.naruto-anchor{
+    margin-top: 4vh;
+    width: 5vw;
+    height: 5vh;
+    padding: 2vh;
+    background-color: #4338CA;
+    border-radius: 1.5vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
