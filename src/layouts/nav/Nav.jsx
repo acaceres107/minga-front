@@ -1,21 +1,17 @@
 import React, {useState} from "react"
 import { Link as Anchor } from "react-router-dom"
 import "./navbar.css"
-
 import { useDispatch,useSelector } from 'react-redux'
 import authActions from '../../store/auth/actions'
 const { cerrar_sesion } = authActions
 
 const Navbar = () => {
-
     let { token,is_online } = useSelector(store => store.auth)
     let dispatch = useDispatch()
     const [isOpen, setIsOpen] = useState(false)
     const handleMenu = () => setIsOpen(!isOpen)
     const signout = async(event)  => await dispatch(cerrar_sesion(token))
     let userStore=useSelector((store)=>store.auth);
-    console.log(userStore.is_author) 
-
     
     return(
         <div className="navbar">
@@ -25,21 +21,19 @@ const Navbar = () => {
                         userStore.is_author||userStore.is_company?(
                             <>
                                 <Anchor className="each-link" to={"/"}> HOME</Anchor>
-                                <Anchor className="each-link" to={"/"}> NEW COMIC</Anchor>
+                                <Anchor className="each-link" to={"/comics"}> COMICS</Anchor>
+                                <Anchor className="each-link" to={"/new-comic"}> NEW COMIC</Anchor>
                                 <Anchor className="each-link" to={"/edit-chapters"}>EDIT CHAPTER</Anchor>
                                 <Anchor className="each-link" to={"/comics/me"}>MY COMICS</Anchor>
-                                <Anchor className="each-link" to={"/"}> PORFILE</Anchor>
+                                <Anchor className="each-link" to={"/"}> PROFILE</Anchor>
                             </>
                         ):(
                             <>
                                 <Anchor className="each-link" to={"/"}> HOME</Anchor>
                                 <Anchor className="each-link" to={"/comics"}> COMICS</Anchor>
-                                <Anchor className="each-link" to={"/comics/me"}>MY COMICS</Anchor>
-                                <Anchor className="each-link" to={"/new-chapters"}> NEW CHAPTER</Anchor>
                             </>
                         )    
                     }
-                    
                     {is_online ? (
                         <span className="each-link" onClick={signout}>SIGN OUT</span>
                     ) : (

@@ -4,6 +4,7 @@ import Layouts from "../layouts/Layout";
 import Header from "../components/home/Home";
 import Newchapter from "../components/chapters/Newchapters";
 import NewAuthor from "../components/authors/NewAuthor";
+import NewComic from "../components/comics/NewComic";
 import Pages from "../routes/pages/Pages";
 import Comic from "./mangas/comics/Comic";
 import Home from "../components/home/Home";
@@ -31,6 +32,9 @@ export const router = createBrowserRouter([{
     },{
         path:'/new-author',
         element: <NewAuthor/>,
+    },{
+        path:'/new-comic',
+        element: <NewComic/>,
     },{
         path:"/comic/:id",
         element: <Comic/>, 
