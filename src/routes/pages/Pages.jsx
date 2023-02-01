@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Nav from '../../layouts/nav/Nav'
+import Nav from '../../layouts/nav/NavVar'
 import chapterActions from '../../store/chapter/actions'
 import { useParams, useNavigate,Link } from 'react-router-dom'
 import "./pages.css"

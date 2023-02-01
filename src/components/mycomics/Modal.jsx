@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './modal.css'
 import myComicsAction from '../../store/mycomics/mycomics.actions';
 import Mycomics from './Mycomics';
-import { useParams, useNavigate, Navigate } from 'react-router-dom';
+import { useParams, useNavigate, } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRef } from 'react';
 import alertActions from "../../store/alerts/actions"
