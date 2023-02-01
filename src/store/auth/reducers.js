@@ -11,7 +11,8 @@ const initialState = {
     is_admin: false,
     is_author: false,
     is_company: false,
-    is_online: false
+    is_online: false,
+    id:'',
 }
 
 const authReducer = createReducer(initialState,
@@ -48,14 +49,16 @@ const authReducer = createReducer(initialState,
             let newState = {}
             if (success) {
                 const { user,token } = response
+                console.log(user)
                 localStorage.setItem('token',token)
                 newState = {
                     ...state,
                     mail: user.mail,
                     photo: user.photo,
                     is_admin: user.is_admin,
-                    is_author: user.is_admin,
+                    is_author: user.is_author,
                     is_company: user.is_company,
+                    id:user.id,
                     is_online: true,
                     messages: ['welcome!'],
                     token: token
@@ -73,7 +76,7 @@ const authReducer = createReducer(initialState,
                     }
                 }
             }
-            //console.log(newState)
+            console.log(newState)
             return newState
         })
         .addCase(iniciar_sesion_con_token.fulfilled, (state, action) => {
@@ -82,13 +85,15 @@ const authReducer = createReducer(initialState,
             let newState = {}
             if (success) {
                 const { user,token } = response
+                console.log(user)
                 newState = {
                     ...state,
                     mail: user.mail,
                     photo: user.photo,
                     is_admin: user.is_admin,
-                    is_author: user.is_admin,
+                    is_author: user.is_author,
                     is_company: user.is_company,
+                    id:user.id,
                     is_online: true,
                     messages: ['welcome back!'],
                     token
@@ -99,7 +104,7 @@ const authReducer = createReducer(initialState,
                     messages: [response]
                 }
             }
-            //console.log(newState)
+            console.log(newState)
             return newState
         })
         .addCase(cerrar_sesion.fulfilled, (state, action) => {

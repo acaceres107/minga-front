@@ -1,34 +1,71 @@
-.section-form {
-    width:100%;
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    overflow: hidden;
+    height: 1000px;
 }
-.input{
-    width: 68%;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid 1px black;
-    background-color:transparent;
-    color: black;
-} 
-option{
-    background-color: rgb(215, 207, 207);
+.titulo1{
+    color: #222222;
+    font-style: normal;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 36px;
+}
+.img1{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
 }
 
-.button-form {
-    padding: 1em 6em;
-    margin-top: 2em;
-    border-radius: 3rem;
-    border: none;
-    background-color: grey;
-    color: white;
-    letter-spacing: 0.1rem;
+.formP{
+    background: #fff;
+    width: 40%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+.form1{
+    width: 100%;
+    margin: auto;
+}
+.formP .grupo{
+    position: relative;
+    margin: 20px;
+}
+.input1{
+    background: none;
+    color:#424242;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid #424242;
+    resize: none;
+}
+.input1:focus{
+    outline: none;
+    color: #424242;
+}
+.input1:focus~label{
+    position: absolute;
+    font-size: 12px;
+    color: #424242;
+}
+
+.btn{
+    background-color: #4338CA;
+    display: block;
+    width: 60%;
+    height: 60px;
+    border:none;
+    color:#fff; 
+    border-radius: 50px;
+    font-size: 18px;
+    margin: 80px auto;
+    padding:20px, 55px, 20px, 55px;
 }
 
 
