@@ -12,7 +12,6 @@ function NewAuthor() {
     const inputDate = useRef("");
     const inputUrl = useRef("");
     let userStore=useSelector((store)=>store.auth);
-    console.log(userStore.is_author) 
 
     let guardarData = (e) => {
         e.preventDefault()
@@ -26,10 +25,7 @@ function NewAuthor() {
             user_id: userStore.id,
         }
          axios.post("http://localhost:8000/api/authors/",data)
-         .then(e=>{console.log(e) 
-            //userStore.is_author=true
-            console.log(userStore)
-        })
+         .then(e=>{console.log(e) })
          .catch(error=>console.log(error))
          
     }

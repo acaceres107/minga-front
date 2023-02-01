@@ -41,7 +41,6 @@ function NewComic() {
     }; 
     axios.post('http://localhost:8000/api/comics',comic)
       .then((res)=>{
-        console.log(res)
         dispatch(alert(res.data.response))
       })
       .catch((err)=>console.log(err))
