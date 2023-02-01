@@ -1,0 +1,54 @@
+.role-container{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+}
+.options-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-minga{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.img-role{
+    width: 40%;
+}
+.img-role>img{
+    object-fit: fill;
+    height: 100%;
+}
+.links-container{
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.links-container div{ 
+    margin: .5rem;
+    border: solid .5px rgba(0, 0, 0, 0.349);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+}
+:hover Link{
+    border: solid 1px black;
+}
+.links-container img{
+    height: 3rem;
+    width: 5rem;
+    object-fit: contain;
+}
+.text-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none !important;
+}

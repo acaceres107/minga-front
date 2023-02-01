@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import actionComment from '../../store/comments/comments.action';
 import RenderComment from '../renderComment/RenderComment'
-import Nav from '../../layouts/nav/NavVar'
+import Nav from '../../layouts/nav/Nav'
 import { useState } from 'react';
 const {getComments}=actionComment
 

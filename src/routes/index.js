@@ -3,6 +3,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Layouts from "../layouts/Layout";
 import Header from "../components/home/Home";
 import Newchapter from "../components/chapters/Newchapters";
+import NewAuthor from "../components/authors/NewAuthor";
+import NewComic from "../components/comics/NewComic";
 import Pages from "../routes/pages/Pages";
 import Comic from "./mangas/comics/Comic";
 import Home from "../components/home/Home";
@@ -15,7 +17,7 @@ import Modal from "../components/mycomics/Modal";
 import ChapterEdit from "../components/editions/ChapterEdit";
 import Welcome from "../components/welcome/Welcome";
 import SuccessPayment from "../components/mercadoPago/SuccesPayment";
-
+import NewRole from "../components/role/NewRole";
 
 
 export const router = createBrowserRouter(
@@ -31,6 +33,12 @@ export const router = createBrowserRouter(
     },{
         path:'/new-chapters',
         element: <Newchapter/>,
+    },{
+        path:'/new-author',
+        element: <NewAuthor/>,
+    },{
+        path:'/new-comic',
+        element: <NewComic/>,
     },{
         path:"/comic/:id",
         element: <Comic/>, 
@@ -69,7 +77,9 @@ export const router = createBrowserRouter(
 },{ 
     path:"/success-payment",
     element:<SuccessPayment/>
- 
+},{
+    path:"/new-role",
+    element: <NewRole/>, 
 }])
 
 export default router

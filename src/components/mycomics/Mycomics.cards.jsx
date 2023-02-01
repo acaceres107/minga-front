@@ -22,6 +22,7 @@ function Mycards({title, photo, id}) {
     </Link>
       <div className='btnContainer'>
         <Link  className='btnE' to={`/edit-comics/${id}`}>Edit</Link>
+        <Link className='btn-edit' to={'/edit-chapters'}>Edit Chapter</Link>
       </div>
     </div>
   </>

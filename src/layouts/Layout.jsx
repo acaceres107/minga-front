@@ -1,13 +1,13 @@
 import Footer from './footer/Footer'
 import React from 'react' 
 import { Outlet } from 'react-router-dom'
-import NavVar from './nav/NavVar'
+import Nav from './nav/Nav'
 
 
 export default function Layouts() {
     return (
         <div>
-            <NavVar/>
+            <Nav/>
             <Outlet/>
             <Footer/>
         </div>
