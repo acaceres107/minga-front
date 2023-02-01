@@ -16,15 +16,17 @@ import ChapterEdit from "../components/editions/ChapterEdit";
 import Welcome from "../components/welcome/Welcome";
 
 
-export const router = createBrowserRouter([{
 
-
+export const router = createBrowserRouter(
+  
+      [{
     path: "/",
     element: 
         <Layouts/>,
-    children:[{
+    children:[
+        {
         path:'/',
-        element: <Header/>,
+        element: <Header/>
     },{
         path:'/new-chapters',
         element: <Newchapter/>,

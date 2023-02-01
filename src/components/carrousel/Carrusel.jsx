@@ -10,7 +10,6 @@ const { allComics }= actionAllComic
 export default function Carrusel() {
     const [slideActivo, setSlideActivo] = useState(0)
     const dispach = useDispatch()
-
     const comics = useSelector((store) => store?.all.comic)
 
   const comicSort = [...comics]

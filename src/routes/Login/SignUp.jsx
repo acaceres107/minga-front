@@ -43,11 +43,11 @@ const SignUp = () => {
                     <input type="text" placeholder="Photo" ref={photo}/>
                     <label htmlFor="">Password</label>
                     <input type="password" placeholder="Password" ref={password}/>
-                    <input onClick={(e)=>captureData(e)} type="submit" value="enviar" />
+                    <input className="button-start1" onClick={(e)=>captureData(e)} type="submit" value="enviar" />
                 </fieldset>
                 <div className="letrero">
-                    <p>Do you already have an account? then</p>
-                    <Anchor to="/signin">Login!</Anchor>
+                    <p>Do you already have an account? then...</p>
+                    <Anchor className="button-start1" to="/signin">Login!</Anchor>
                 </div>
             </form>
         </div>
