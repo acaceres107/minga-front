@@ -4,13 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import Mycards from "../mycomics/Mycomics.cards";
 import myComicsAction from "../../store/mycomics/mycomics.actions";
 import BtnCategories from '../btnCategories/BtnCategories';
-
+import { useNavigate } from "react-router-dom";
 
 function Mycomics() {
+  let navigate = useNavigate()
+  let dispatch = useDispatch();
   const { getMycomics } = myComicsAction;
+  let { is_online } = useSelector((store) => store.auth);
+
   let comicstore = useSelector((store) => store);
   let mail = comicstore.auth.mail;
-  let dispatch = useDispatch();
   let categoriesStore = useSelector((store) => store?.categories?.filterCategory);
   const btnCategory = categoriesStore;
   const comics = comicstore.comic;
@@ -31,10 +34,15 @@ function Mycomics() {
       category:btnCategory
     }))
   }
-
+ 
 
   return (
     <>
+    { !is_online ? (
+      navigate("/")
+    ) : ( 
+      <>
+
       <div className="header-comics1">
         <h1>Welcome Back! {mail}</h1>
       </div>
@@ -60,6 +68,9 @@ function Mycomics() {
           )}
         </div>
       </main>
+      </>
+      )}
+     
     </>
   );
 }

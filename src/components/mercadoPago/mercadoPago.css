@@ -9,7 +9,10 @@
     align-items: center;
     justify-content: center;
   }
-  
+  .payment-title{
+    margin-bottom: 8vh;
+    font-size: 3.7vh;
+  }
   .modal-content1 {
     background-color: white;
     padding: 20px;
@@ -21,7 +24,31 @@
     align-items: center;
     flex-direction: column;
   }
+  .payment-container{
+    display: flex;
+    flex-direction: row;
+  }
   .payment-card{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: grey 1px  solid ;
+    margin-top: 2.5vh;
+    border-radius: 2vh;
+    margin: 1vh;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  .payment-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transition: 200ms;
+    width: 15.5vw;
+    height: 20.5vh;
+  }
+  .payment-input{
     width: 48vw;
     height: 20vh;
     display: flex;
@@ -30,9 +57,15 @@
     border: grey 1px  solid ;
     margin-top: 2.5vh;
     border-radius: 2vh;
-/*     padding: 20px ;
-    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8); */
-  }
+    margin-bottom: 5vh;
+}
+.payment-input:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: 200ms;
+  width: 48.5vw;
+  height: 20.5vh;
+}
+  
   .payment-btn{
     background-color: #4338CA;
     width: 10vw;
@@ -43,6 +76,7 @@
   }
   .payment-btn:hover{
     background-color: #635ace;
+    transition: 500ms;
   }
   .mp{
     width: 8vw;
@@ -52,27 +86,30 @@
 
   
   .modal-close-btn {
-    width: 4vw;
-    height: 5vh;
     object-fit: contain;
     float: right;
-    padding: 10px;
     border: none;
-    background-color: #f44336;
-    color: white;
-    font-size: 16px;
     cursor: pointer;
-    margin-top: 1vh;
+    background-color: white;
   }
 .modal-close-btn>img{
   width: 2.5vw;
   height: 2.5vh;
+  object-fit: contain;
 }
 .equisClose{
+  width: 50vw;
+  height: 5vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  margin-bottom: 6vh;
+  cursor: pointer;
+
 }
-.modal-close-btn:hover{
+/* .modal-close-btn:hover{
   background-color: #e66157;
+} */
+.payment-personal{
+  width: 6vw;
+
 }

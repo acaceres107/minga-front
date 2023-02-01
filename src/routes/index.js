@@ -13,17 +13,21 @@ import SignUp from "./Login/SignUp"
 import SignIn from "./Login/SignIn"
 import Modal from "../components/mycomics/Modal";
 import ChapterEdit from "../components/editions/ChapterEdit";
+import Welcome from "../components/welcome/Welcome";
+import SuccessPayment from "../components/mercadoPago/SuccesPayment";
 
 
-export const router = createBrowserRouter([{
 
-
+export const router = createBrowserRouter(
+  
+      [{
     path: "/",
     element: 
         <Layouts/>,
-    children:[{
+    children:[
+        {
         path:'/',
-        element: <Header/>,
+        element: <Header/>
     },{
         path:'/new-chapters',
         element: <Newchapter/>,
@@ -59,6 +63,13 @@ export const router = createBrowserRouter([{
 },{
     path:"/edit-chapters",
     element: <ChapterEdit/>, 
+},{
+    path:"/verify/:verify_Code",
+    element: <Welcome/>, 
+},{ 
+    path:"/success-payment",
+    element:<SuccessPayment/>
+ 
 }])
 
 export default router

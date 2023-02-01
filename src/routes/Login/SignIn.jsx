@@ -34,13 +34,13 @@ const SignIn = () => {
                 <fieldset className="fielInput">
                     <label htmlFor="mail">Mail</label>
                     <input type="text" placeholder='Email'id='mail' ref={mail}/>
-                    <label htmlFor="pass">Password</label>
+                    <label htmlFor="pass">Password </label>
                     <input type="password" id='pass' placeholder='password' ref={password}/>
-                    <input onClick={captureData} type="submit" value="enviar" />
+                    <input className="button-start1" onClick={captureData} type="submit" value="enviar" />
                 </fieldset>
-                <div>
+                <div className="letrero">
                     <p>Still don't have an account?</p>
-                    <Anchor to={"/signup"}>Sign up!</Anchor>
+                    <Anchor className="button-start1" to={"/signup"}>Sign up!</Anchor>
                 </div>
             </form>
             <div className='grow bkg div2' style={{backgroundImage: "url('https://images.pexels.com/photos/4841961/pexels-photo-4841961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"}}></div>

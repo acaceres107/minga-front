@@ -1,57 +1,64 @@
 import React, { useState, useEffect } from 'react'
 import Slide from './Slide'
 import '../carrousel/carrusel.css'
+import { useDispatch, useSelector } from 'react-redux'
+import actionAllComic from '../../store/allcomic/actions'
+
+const { allComics }= actionAllComic
 
 
 export default function Carrusel() {
     const [slideActivo, setSlideActivo] = useState(0)
-    const [manga, setManga] = useState([])
+    const dispach = useDispatch()
+    const comics = useSelector((store) => store?.all.comic)
 
-    const traerDatos = async () => {
-        try {
-            const respuesta = await fetch("./manga.json")
-            const data = await respuesta.json()
-            setManga(data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
+  const comicSort = [...comics]
 
-    useEffect(() => {
-        traerDatos()
-    }, []
-    )
+  let comic = comicSort.sort(function compare(a, b) {
+    let dateA = new Date(a.createdAt);
+    let dateB = new Date(b.createdAt);
+    return dateB - dateA;
+  }).slice(0,5)
 
-    useEffect(() => {
-        let interval = setInterval(() => {
-            siguienteSlide()
-        }, 3000);
-        return () => clearInterval(interval)
+console.log(comic)
 
-    })
+useEffect(() => {
+    let interval = setInterval(() => {
+        siguienteSlide()
+    }, 3000);
+    return () => clearInterval(interval)
+}
+)
 
-    const siguienteSlide = (e) =>  {
-        setSlideActivo(slideActivo === manga.length - 1 ? 0 : slideActivo + 1)
+
+useEffect( ()=>{
+    dispach(allComics())
+},[]
+)
+ 
+
+     const siguienteSlide = (e) =>  {
+        setSlideActivo(slideActivo === comic.length - 1 ? 0 : slideActivo + 1)
     }
     const siguienteSlide2 = (e) =>  {
         e.preventDefault()
-        setSlideActivo(slideActivo === manga.length - 1 ? 0 : slideActivo + 1)
+        setSlideActivo(slideActivo === comic.length - 1 ? 0 : slideActivo + 1)
     }
     const anteriorSlide = (e) => {
         e.preventDefault()
-        setSlideActivo(slideActivo === 0 ? manga.length - 1 : slideActivo - 1)
-    }
+        setSlideActivo(slideActivo === 0 ? comic.length - 1 : slideActivo - 1)
+    } 
 
 
 
     return (
             <div className="padre">
-            <div className='carrusel'>
-                <Slide url={manga[slideActivo]?.photo} />
-                <div className="text">{manga[slideActivo]?.title}</div>
+             <div className='carrusel'> 
+                <Slide url={comic[slideActivo]?.photo} />
+                <div className="text">{comic[slideActivo]?.title}</div> 
                 <a href='.' className="prev" onClick={anteriorSlide}>&#10094;</a>
                 <a href='.' className="next" onClick={siguienteSlide2}>&#10095;</a>
-            </div>
+            </div> 
             </div>
     )
 }
