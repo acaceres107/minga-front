@@ -79,11 +79,25 @@ footer{
 .pagess>h4{
     color: black;
 }
-/* .redes{
-    margin: auto;
-    width: 50%;
-    padding-top: 40px;
-}  */
+
+.donateBtn:hover{
+    background-color: #574ec4;
+}
+.donateBtn{
+    color: white;
+    cursor:pointer;    
+    background-color: #4338CA;
+    width: 95%;
+    height: 7vh;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+}
+.redes{
+    height: 50%;
+}
 .redes>img{
     display: inline-block;
     flex-wrap: wrap;
