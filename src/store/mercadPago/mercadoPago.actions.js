@@ -6,7 +6,7 @@ const donation = createAsyncThunk(
     "donation",
     async ({data, token}) => {
         try{
-            const url = `http://localhost:8000/api/donation`
+            const url = `https://mingaback-production.up.railway.app/api/donation`
             let headers = {headers: {'Authorization':`Bearer ${token}`}}
             const response = await axios.post(url, data, headers)
             console.log(response);

@@ -2,8 +2,14 @@ import './button.css'
 import React,{useState} from 'react';
 import { useDispatch} from 'react-redux';
 import categoriesActions from '../../store/categories/categories.action';
+
+
 const {filterCategoryComics}=categoriesActions
+
+
 function Button({id,name,num}) {
+
+    
     let dispatch=useDispatch();
     let [click,setClick]=useState(false);
     

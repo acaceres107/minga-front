@@ -7,7 +7,7 @@ let getMycomics = createAsyncThunk(
     async({token})=>{
         try{
             
-            let url = `http://localhost:8000/api/comics/me/`
+            let url = `https://mingaback-production.up.railway.app/api/comics/me/`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
             const response = await axios.get(url, headers)
 
@@ -28,7 +28,7 @@ let deleteMyCard = createAsyncThunk(
     async(id)=>{
         let token = localStorage.getItem("token")
         try{
-            let url = `http://localhost:8000/api/comics/${id}`
+            let url = `https://mingaback-production.up.railway.app/api/comics/${id}`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
             const response = await axios.delete(url, headers)
             console.log(response);
@@ -44,7 +44,7 @@ let updateMyCard = createAsyncThunk(
     async({id, comic})=>{
         let token = localStorage.getItem("token")
         try{
-            let url = `http://localhost:8000/api/comics/${id}`
+            let url = `https://mingaback-production.up.railway.app/api/comics/${id}`
             let headers = {headers: {'Authorization': `Bearer ${token}`}}
             const response = await axios.put(url, comic, headers)
             return{response: response.status, succes: true, message: "Updated with succes"}

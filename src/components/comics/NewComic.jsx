@@ -18,7 +18,7 @@ function NewComic() {
 
   const getData = async()=>{
     try {
-       const response = await axios.get("http://localhost:8000/api/categories")
+       const response = await axios.get("https://mingaback-production.up.railway.app/api/categories")
        setCategories(response.data.response)
       }
       catch(error){
@@ -39,7 +39,7 @@ function NewComic() {
       description: description.current.value,
       category: "63b31c350bddc55d435910d7",
     }; 
-    axios.post('http://localhost:8000/api/comics',comic)
+    axios.post('https://mingaback-production.up.railway.app/api/comics',comic)
       .then((res)=>{
         dispatch(alert(res.data.response))
       })
