@@ -20,7 +20,7 @@ function Newchapter ( ) {
             pages:inputPages?.current?.value.split(',').map(element => element.trim()),
             order: inputOrder?.current?.value
         }
-        axios.post("http://localhost:8000/api/chapters", data)
+        axios.post("https://mingaback-production.up.railway.app/api/chapters", data)
         .then(res => dispatch(mingaAlert("Done")))
         .catch(err => 
             dispatch(mingaAlert(err.response.data.response)))

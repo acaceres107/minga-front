@@ -24,7 +24,7 @@ function NewAuthor() {
             photo: inputUrl.current.value,
             user_id: userStore.id,
         }
-         axios.post("http://localhost:8000/api/authors/",data)
+         axios.post("https://mingaback-production.up.railway.app/api/authors/",data)
          .then(e=>{console.log(e) })
          .catch(error=>console.log(error))
          

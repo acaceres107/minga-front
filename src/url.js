@@ -1,5 +1,5 @@
 
-let urlApi =  "http://localhost:8000/"
+let urlApi =  "http://localhost:8080/api/"
 
 
 if ( process.env.NODE_ENV === "production") {

@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './cards.css'
-function Cards ({title, photo, id}) {
+function Cards ({title, photo, id , category}) {
+  console.log(category)
   return (
     <>
         <Link to={`/comic/${id}`}>
           <div className='card' >
           <h3>{title}</h3>
+          <h3>{category}</h3>
           <img src={photo} alt="img"/>
           </div>
         </Link>

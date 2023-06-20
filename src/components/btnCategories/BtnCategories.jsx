@@ -10,7 +10,7 @@ const BtnCategories = () => {
 
   const getData = async()=>{
     try {
-       const response = await axios.get("http://localhost:8000/api/categories")
+       const response = await axios.get("https://mingaback-production.up.railway.app/api/categories")
        setCategories(response.data.response)
       }
       catch(error){

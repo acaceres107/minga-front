@@ -19,6 +19,7 @@ function ComicsList() {
   const [page,setPage]=useState(1)
   const comics=comicstore.comic
   let title=''
+  
   useEffect(()=>{
     dispatch(getComics({
       page:page,
@@ -75,7 +76,7 @@ function ComicsList() {
             </form>
             <div className='card-container'>
               {
-                comics?.length!==0?comics?.map((e,index)=>{return (<Cards title={e.title} id={e._id} photo={e.photo} key={index}></Cards>)}):<h1 className='message'>COMIC NOT FOUND</h1>
+                comics?.length!==0?comics?.map((e,index)=>{return (<Cards category={e} title={e.title} id={e._id} photo={e.photo} key={index}></Cards>)}):<h1 className='message'>COMIC NOT FOUND</h1>
               }
               
             </div>

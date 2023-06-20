@@ -18,7 +18,7 @@ function Coments({chapter_id,reload,set}) {
     let headers = {headers: {'Authorization':` Bearer  ${userStore} `}}   
 
     await axios
-      .post("http://localhost:8000/api/comments", data,headers)
+      .post("https://mingaback-production.up.railway.app/api/comments", data,headers)
       .then((e) => console.log(e))
       .catch((error) => console.log(error));
       set(!reload)
